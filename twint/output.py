@@ -129,6 +129,9 @@ def _output(obj, output, config, **extra):
 async def checkData(tweet, config, conn):
     logme.debug(__name__ + ':checkData')
     tweet = Tweet(tweet, config)
+    if config.MongoDB:
+        print("config.MongoDB: ", config.MongoDB)
+        mongodb.Tweet(tweet, config)
     if not tweet.datestamp:
         logme.critical(__name__ + ':checkData:hiddenTweetFound')
         print("[x] Hidden tweet found, account suspended due to violation of TOS")
