@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-import datetime
+from datetime import datetime
 
 from geopy.geocoders import Nominatim
 
