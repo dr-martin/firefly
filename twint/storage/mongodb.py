@@ -121,8 +121,8 @@ def Tweet(Tweet, config):
     #     helpers.bulk(es, actions, chunk_size=2000, request_timeout=200)
     # actions = []
 
-    client = MongoClient(config.MongoDB.url)
-    db = client[config.MongoDB.db]
-    collection = db[config.MongoDB.collection]
+    client = MongoClient(config.MongoDBurl)
+    db = client[config.MongoDBdb]
+    collection = db[config.MongoDBcollection]
     collection.insert_one(actions)
     client.close()
