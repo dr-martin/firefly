@@ -12,6 +12,12 @@ Twint utilizes Twitter's search operators to let you scrape Tweets from specific
 
 Twint also makes special queries to Twitter allowing you to also scrape a Twitter user's followers, Tweets a user has liked, and who they follow **without** any authentication, API, Selenium, or browser emulation.
 
+## Disclaimer 
+This repo is a fork of Twint for save data in a MongoDB:
+- Changed the config.py.
+- Changed the output.py CheckData function.
+- Added a mongodb.py file in storage folder.
+
 ## tl;dr Benefits
 Some of the benefits of using Twint vs Twitter API:
 - Can fetch almost __all__ Tweets (Twitter API limits to last 3200 Tweets only);
